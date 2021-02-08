@@ -1,0 +1,86 @@
+/* InscripcionesComponent's private CSS styles */
+.inscripciones table {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 20em;
+}
+.inscripciones li {
+  position: relative;
+  cursor: pointer;
+  background-color: #eee;
+  margin: 0.5em;
+  padding: 0.3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+
+.inscripciones li:hover {
+  color: #607d8b;
+  background-color: #ddd;
+  left: 0.1em;
+}
+
+.inscripciones a {
+  color: #333;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  width: 250px;
+}
+
+.inscripciones a:hover {
+  color: #607d8b;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+button.delete {
+  position: relative;
+  left: 270px;
+  top: -32px;
+  background-color: gray !important;
+  color: white;
+}
+
+.inscripciones .mensualidad {
+  position: relative;
+  left: 80px;
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.8em 0 0.8em;
+  background-color: #748496;
+  top: -4px;
+  height: 1.8em;
+  border-radius: 0 4px 4px 0;
+}
+
+table.misdatos {
+  font-family: Georgia, serif;
+  border: 6px solid #24943a;
+  background-color: #0c3508;
+  width: 100%;
+  text-align: center;
+}
+input {
+  background-color: whitesmoke;
+  text-align: center;
+  border-radius: 3px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-color: black;
+  border-width: 2px;
+  border-collapse: separate;
+}

@@ -1,0 +1,62 @@
+<h2>Nueva Inscripcion</h2>
+
+<div>
+	<th>
+		<tr>
+			<label
+        >Nombre:
+        <input #inscripcionNombre />
+      </label>
+		</tr>
+		<br />
+		<tr>
+			<label
+        >Mensualidad:
+        <input placeholder=" Euros € " #inscripcionMensualidad />
+      </label>
+		</tr>
+		<br />
+		<tr>
+			<label
+        >Modalidad:
+        <input #inscripcionModalidad />
+      </label>
+		</tr>
+		<br />
+		<tr>
+			<label>
+        Fecha alta:
+        <input placeholder="Por defecto" #inscripcionFecha_alta />
+      </label>
+		</tr>
+		<!-- (click) passes input value to add() and then clears the input -->
+		<button
+      (click)="add(inscripcionNombre.value, inscripcionMensualidad.value, inscripcionModalidad.value, inscripcionFecha_alta.value); inscripcionNombre.value=''; inscripcionMensualidad.value=''; inscripcionModalidad.value=''; inscripcionFecha_alta.value=''"
+    >
+      Añadir
+    </button>
+	</th>
+</div>
+
+<p>Inscripciones activas</p>
+<br>
+
+
+<table class="misdatos">
+	<tr>
+		<th>Nombre</th>
+		<th>Modalidad</th>
+		<th>Mensualidad</th>
+		<th>Fecha de Alta</th>
+		<th>Eliminar</th>
+	</tr>
+	<tr *ngFor="let inscripcion of inscripciones">
+		<th><a routerLink="/detail/{{inscripcion.id}}">{{inscripcion.nombre}}</a></th>
+		<th><span class="modalidad">{{inscripcion.modalidad}}</span></th>
+		<th><span class="mensualidad">{{inscripcion.mensualidad}}</span></th>
+		<th><span class="fechalta">{{inscripcion.fecha_alta}}</span></th>
+		<!-- Importante el css -->
+		<th>x<button class="delete" title="delete inscripcion"
+      (click)="delete(inscripcion)"></button> </th>
+	</tr>
+</table>

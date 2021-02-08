@@ -1,0 +1,22 @@
+<div *ngIf="inscripcion != undefined">
+	<!--  la condición devuelve lo mismo si ponemos solo "hero"-->
+	<h2>{{inscripcion.nombre | uppercase}}</h2>
+	<div><span>id: </span>{{inscripcion.id}}</div>
+	<div>
+		<label
+      >Nombre:
+      <input [(ngModel)]="inscripcion.nombre" placeholder="nombre" />
+    </label>
+		<br />
+		<label
+      >Mensualidad €:
+      <input
+        #inscripcionMensualidad
+        [(ngModel)]="inscripcion.mensualidad"
+        placeholder="mensualidad"
+      />
+    </label>
+	</div>
+	<button (click)="goBack()">go back</button>
+	<button (click)="save(inscripcionMensualidad.value)">save</button>
+</div>
